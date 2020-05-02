@@ -4,7 +4,7 @@ import {
     View,
   } from 'react-native';
 
-export default class AuhtenticationScreen extends React.Component {
+export default class AuthenticationScreen extends React.Component {
     render() {
         return (
           <View>

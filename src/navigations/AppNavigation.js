@@ -12,7 +12,7 @@ import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 import IngredientScreen from '../screens/Ingredient/IngredientScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
-import Auhtentication from '../screens/Auht/AuhtenticationScreen';
+import Authentication from '../screens/Auht/AuthenticationScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
 
 const MainNavigator = createStackNavigator(
@@ -23,12 +23,11 @@ const MainNavigator = createStackNavigator(
     RecipesList: RecipesListScreen,
     Ingredient: IngredientScreen,
     Search: SearchScreen,
-    Auhtentication: Auhtentication,
+    Authentication: Authentication,
     IngredientsDetails: IngredientsDetailsScreen
   },
   {
     initialRouteName: 'Home',
-    // headerMode: 'float',
     defaulfNavigationOptions: ({ navigation }) => ({
       headerTitleStyle: {
         fontWeight: 'bold',
