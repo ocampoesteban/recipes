@@ -36,9 +36,9 @@ export default class DrawerContainer extends React.Component {
           />
            <MenuButton
             title="Logout"
-            source={require('../../../assets/icons/search.png')}
+            source={require('../../../assets/icons/category.png')}
             onPress={() => {
-              navigation.navigate('Authentication');
+              navigation.navigate('Login');
               navigation.closeDrawer();
             }}
           />
