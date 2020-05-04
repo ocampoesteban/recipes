@@ -34,6 +34,22 @@ const styles = StyleSheet.create({
     marginRight: 10,
     width: 270,
   },
+  bttnDisabled: {
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    borderColor: '#6363635c',
+    borderRadius: 100,
+    borderWidth: 1,
+    height: 50,
+    justifyContent: 'center',
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 10,
+    width: 270,
+  },
+  logginBttnTextDisabled: {
+    color: '#6363635c',
+  },
   loginBttnText: {
     color: '#2cd18a',
   },
