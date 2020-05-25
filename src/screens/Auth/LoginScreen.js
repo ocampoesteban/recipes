@@ -4,22 +4,33 @@ import {
     View,  
     TextInput,
     Text,
-    Image,
   } from 'react-native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
-
-
 export default class LoginScreen extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       user: '',
-      password: ''
+      password: '',
+      icon: 'eye-slash',
+      hidePassword: true
     }
     this.user = React.createRef();
     this.password = React.createRef();
+  }
+
+  changeIcon = () => {
+    this.state.icon !== "eye-slash" ?
+      this.setState({ 
+        icon: "eye-slash",
+        hidePassword: true
+      }) :
+      this.setState({ 
+        icon: "eye",
+        hidePassword: false
+      })
   }
 
   onPressLogin = () => {
@@ -29,7 +40,7 @@ export default class LoginScreen extends React.Component {
   };
 
   render() {
-    const { user, password } = this.state;
+    const { user, password, hidePassword, icon } = this.state;
     const isEnabled =  user.length > 0 &&  password.length > 0;
     return (
       <View style={styles.authContainer}>
@@ -45,24 +56,32 @@ export default class LoginScreen extends React.Component {
               ref={this.user}
               maxLength={30}
             />
-            <TextInput
-              name="password"
-              style={styles.textInput}
-              placeholder="Password"
-              secureTextEntry={true}
-              placeholderTextColor="#6363638a"
-              onChangeText = {evt => {
-                this.setState({ password: evt });
-              }}
-              maxLength={30}
-              ref={this.password}
-            />
+            <View style={styles.passwordContainer}>
+              <TextInput
+                name="password"
+                style={styles.textInputPassword}
+                placeholder="Password"
+                secureTextEntry={hidePassword}
+                placeholderTextColor="#6363638a"
+                onChangeText = {evt => {
+                  this.setState({ password: evt });
+                }}
+                maxLength={30}
+                ref={this.password}
+              />
+              <Icon 
+                style={styles.icon} 
+                name={icon} 
+                size={30} 
+                onPress={() => this.changeIcon()} 
+              />
+            </View>
         </View>
         <Button underlayColor='transparent' 
           style = { 
             !isEnabled ? 
-            styles.bttnDisabled : 
-            styles.bttn 
+            styles.btnDisabled : 
+            styles.btn 
           }
           shadowless 
           onPress={() => this.onPressLogin()}
@@ -71,8 +90,8 @@ export default class LoginScreen extends React.Component {
           <Text 
             style={
               !isEnabled ? 
-              styles.logginBttnTextDisabled: 
-              styles.loginBttnText 
+              styles.loginBtnTextDisabled: 
+              styles.loginBtnText 
             }
           >
             Login

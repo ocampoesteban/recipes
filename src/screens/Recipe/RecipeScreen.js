@@ -10,7 +10,6 @@ import {
   TouchableHighlight
 } from 'react-native';
 import styles from './styles';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getCategoryName, getCategoryById } from '../../data/MockDataAPI';
 import BackButton from '../../components/BackButton/BackButton';
 import CarouselC from '../../components/Carousel/Carousel';
@@ -56,6 +55,7 @@ export default class RecipeScreen extends React.Component {
 
   render() {
     const { activeSlide } = this.state;
+    debugger
     const { navigation } = this.props;
     const item = navigation.getParam('item');
     const category = getCategoryById(item.categoryId);
@@ -63,39 +63,7 @@ export default class RecipeScreen extends React.Component {
 
     return (
       <ScrollView style={styles.container}>
-        <View style={styles.carouselContainer}>
-          <View style={styles.carousel}>
-            <Carousel
-              ref={c => {
-                this.slider1Ref = c;
-              }}
-              data={item.photosArray}
-              renderItem={this.renderImage}
-              sliderWidth={viewportWidth}
-              itemWidth={viewportWidth}
-              inactiveSlideScale={1}
-              inactiveSlideOpacity={1}
-              firstItem={0}
-              loop={false}
-              autoplay={false}
-              autoplayDelay={500}
-              autoplayInterval={3000}
-              onSnapToItem={index => this.setState({ activeSlide: index })}
-            />
-            <Pagination
-              dotsLength={item.photosArray.length}
-              activeDotIndex={activeSlide}
-              containerStyle={styles.paginationContainer}
-              dotColor="rgba(255, 255, 255, 0.92)"
-              dotStyle={styles.paginationDot}
-              inactiveDotColor="white"
-              inactiveDotOpacity={0.4}
-              inactiveDotScale={0.6}
-              carouselRef={this.slider1Ref}
-              tappableDots={!!this.slider1Ref}
-            />
-          </View>
-        </View>
+        <CarouselC item={item} activeSlide={activeSlide} />
         <View style={styles.infoRecipeContainer}>
           <Text style={styles.infoRecipeName}>{item.title}</Text>
           <View style={styles.infoContainer}>

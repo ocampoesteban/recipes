@@ -1,8 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { red } from 'color-name';
-
 const styles = StyleSheet.create({
-
   authContainer: {
     alignItems: 'center',
     flex: 1,
@@ -21,9 +18,24 @@ const styles = StyleSheet.create({
     height: 50,
     marginBottom: 20,
     letterSpacing:3,
-    width: 270
+    width: 270,
   },
-  bttn: {
+  textInputPassword: {
+    borderBottomColor: '#6363635c',
+    borderBottomWidth: 1,
+    fontSize: 20,
+    height: 50,
+    marginBottom: 20,
+    letterSpacing:3,
+    width: 270,
+  },
+  icon: {
+    color: '#504E4E',
+    position: 'absolute',
+    top: 12,
+    right: 0
+  },
+  btn: {
     alignItems: 'center',
     backgroundColor: 'transparent',
     borderColor: '#2cd18a',
@@ -36,7 +48,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     width: 270,
   },
-  bttnDisabled: {
+  btnDisabled: {
     alignItems: 'center',
     backgroundColor: 'transparent',
     borderColor: '#6363635c',
@@ -49,10 +61,10 @@ const styles = StyleSheet.create({
     marginRight: 10,
     width: 270,
   },
-  logginBttnTextDisabled: {
+  loginBtnTextDisabled: {
     color: '#6363635c',
   },
-  loginBttnText: {
+  loginBtnText: {
     color: '#2cd18a',
   },
   text: {
