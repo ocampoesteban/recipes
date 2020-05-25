@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
+import { red } from 'color-name';
 
 const styles = StyleSheet.create({
+
   authContainer: {
     alignItems: 'center',
     flex: 1,

@@ -8,7 +8,7 @@ import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 import IngredientScreen from '../screens/Ingredient/IngredientScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
-import LoginScreen from '../screens/Auht/LoginScreen';
+import LoginScreen from '../screens/Auth/LoginScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
 
 const MainNavigator = createStackNavigator(

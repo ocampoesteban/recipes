@@ -13,6 +13,8 @@ import styles from './styles';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getCategoryName, getCategoryById } from '../../data/MockDataAPI';
 import BackButton from '../../components/BackButton/BackButton';
+import CarouselC from '../../components/Carousel/Carousel';
+
 import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
 
 const { width: viewportWidth } = Dimensions.get('window');

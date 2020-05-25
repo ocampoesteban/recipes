@@ -3,9 +3,12 @@ import { Button } from 'galio-framework';
 import {
     View,  
     TextInput,
-    Text, 
+    Text,
+    Image,
   } from 'react-native';
 import styles from './styles';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 
 export default class LoginScreen extends React.Component {
