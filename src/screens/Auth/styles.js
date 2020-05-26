@@ -30,9 +30,10 @@ const styles = StyleSheet.create({
     width: 270,
   },
   icon: {
-    color: '#504E4E',
+    color: '#504e4ea1',
     position: 'absolute',
     top: 12,
+    fontSize: 23,
     right: 0
   },
   btn: {
