@@ -1,6 +1,6 @@
 import { createAppContainer } from 'react-navigation';
-import {createDrawerNavigator} from 'react-navigation-drawer'
-import {createStackNavigator} from 'react-navigation-stack'
+import { createDrawerNavigator } from 'react-navigation-drawer'
+import { createStackNavigator } from 'react-navigation-stack'
 import HomeScreen from '../screens/Home/HomeScreen';
 import CategoriesScreen from '../screens/Categories/CategoriesScreen';
 import RecipeScreen from '../screens/Recipe/RecipeScreen';
@@ -11,8 +11,7 @@ import SearchScreen from '../screens/Search/SearchScreen';
 import LoginScreen from '../screens/Auth/LoginScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
 
-const MainNavigator = createStackNavigator(
-  {
+const MainNavigator = createStackNavigator({
     Home: HomeScreen,
     Categories: CategoriesScreen,
     Recipe: RecipeScreen,
@@ -27,8 +26,7 @@ const MainNavigator = createStackNavigator(
   }
 ); 
 
-const DrawerStack = createDrawerNavigator(
-  {
+const DrawerStack = createDrawerNavigator({
     Main: MainNavigator
   },
   {
@@ -40,5 +38,3 @@ const DrawerStack = createDrawerNavigator(
 );
 
 export default AppContainer = createAppContainer(DrawerStack);
-
-console.disableYellowBox = true;

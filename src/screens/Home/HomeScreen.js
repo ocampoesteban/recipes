@@ -1,12 +1,10 @@
-import React from 'react';
-import { FlatList, ScrollView, Text, View, TouchableHighlight, Image } from 'react-native';
+import { FlatList, Text, View, TouchableHighlight, Image } from 'react-native';
 import styles from './styles';
 import { recipes } from '../../data/dataArrays';
 import MenuImage from '../../components/MenuImage/MenuImage';
-import DrawerActions from 'react-navigation';
 import { getCategoryName } from '../../data/MockDataAPI';
-import CarouselC from '../../components/Carousel/Carousel';
-
+import React from 'react';
+import AnimatedIcon from '../../components/AnimatedIcon/AnimatedIcon';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -28,9 +26,18 @@ export default class HomeScreen extends React.Component {
     this.props.navigation.navigate('Recipe', { item });
   };
 
+  changeAnimatedIcon = () => {
+
+  }
+
   renderRecipes = ({ item }) => (
     <TouchableHighlight underlayColor='transparent' onPress={() => this.onPressRecipe(item)}>
       <View style={styles.container}>
+        <AnimatedIcon 
+          initialIcon = 'heart'
+          secondIcon = 'hearto'
+          positionIcon = 'animatedIconContainerRightTop'
+        />
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>

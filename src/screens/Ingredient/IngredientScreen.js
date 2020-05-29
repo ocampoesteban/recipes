@@ -31,14 +31,13 @@ export default class IngredientScreen extends React.Component {
 
   renderRecipes = ({ item }) => (
     <TouchableHighlight underlayColor='transparent' onPress={() => this.onPressRecipe(item)}>
-      <TouchableHighlight underlayColor='transparent' onPress={() => this.onPressRecipe(item)}>
         <View style={styles.container}>
+          {/* <Icon /> */}
           <Image style={styles.photo} source={{ uri: item.photo_url }} />
           <Text style={styles.title}>{item.title}</Text>
           <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>
         </View>
       </TouchableHighlight>
-    </TouchableHighlight>
   );
 
   render() {

@@ -7,6 +7,7 @@ import MenuButton from '../../components/MenuButton/MenuButton';
 export default class DrawerContainer extends React.Component {
   render() {
     const { navigation } = this.props;
+
     return (
       <View style={styles.content}>
         <View style={styles.container}>
@@ -34,14 +35,20 @@ export default class DrawerContainer extends React.Component {
               navigation.closeDrawer();
             }}
           />
-           <MenuButton
+          <MenuButton
+            title="Your Recipes"
+            source={require('../../../assets/icons/home.png')}
+            onPress={() => {
+              navigation.closeDrawer();
+            }}
+          />
+          <MenuButton
             title="Logout"
             source={require('../../../assets/icons/category.png')}
             onPress={() => {
               navigation.navigate('Login');
               navigation.closeDrawer();
-            }}
-          />
+          }}/>
         </View>
       </View>
     );
