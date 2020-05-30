@@ -40,7 +40,7 @@ export default class CategoriesScreen extends React.Component {
           <View 
             style={[
               styles.textContainer,
-              key % 2 === 0 ?
+              key % 2 ?
               styles.textContainerRight:
               styles.textContainerLeft
             ]}>

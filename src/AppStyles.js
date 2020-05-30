@@ -49,10 +49,10 @@ const RECIPE_ITEM_MARGIN = 20;
 
  const Utils = StyleSheet.create({
   textShadow: {
-    color: 'white',
-    textShadowColor: 'rgba(0, 0, 0, 1)',
-    textShadowOffset: {width: -1, height: 1},
-    textShadowRadius: 10
+    color: '#fff',
+    textShadowOffset: { width: 5, height: 5 },
+    textShadowRadius: 1,
+    textShadowColor: '#000',
   },
 })
 
