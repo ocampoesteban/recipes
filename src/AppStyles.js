@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from 'react-native';
-
 // screen sizing
 const { width, height } = Dimensions.get('window');
 // orientation must fixed
@@ -50,13 +49,15 @@ const RECIPE_ITEM_MARGIN = 20;
  const Utils = StyleSheet.create({
   textShadow: {
     color: '#fff',
-    textShadowOffset: { width: 5, height: 5 },
-    textShadowRadius: 1,
+    letterSpacing: 2,
+    textShadowOffset: { width: 3, height: 3 },
+    textShadowRadius: 5,
     textShadowColor: '#000',
   },
 })
 
 export {
   Utils,
+  SCREEN_WIDTH,
   RecipeCard
 }

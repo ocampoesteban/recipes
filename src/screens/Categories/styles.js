@@ -1,22 +1,20 @@
 import { StyleSheet } from 'react-native';
 import { fontWeights } from "../../components/commons/utils";
-import { Utils } from '../../AppStyles';
+import { Utils, SCREEN_WIDTH } from '../../AppStyles';
+
+// item size
+const CATEGORY_COLUMN = 1;
+const CATEGORY_HEIGHT = 150;
+const CATEGORY_MARGIN = 20;
 
 const styles = StyleSheet.create({
+  category: Utils.textShadow,
   categoriesItemContainer: {
+    alignSelf: "center",
     flex: 1,
-    margin: 10,
-    height: 160,
-  },
-  textContainer: {
-    position: 'absolute'
-  },
-  textContainerLeft: {
-    left: 20,
-  },
-  textContainerRight: {
-    right: 20,
-    alignItems: 'flex-end',
+    width: (SCREEN_WIDTH - (CATEGORY_COLUMN + 1) * CATEGORY_MARGIN) / CATEGORY_COLUMN,
+    marginTop: CATEGORY_MARGIN,
+    height: CATEGORY_HEIGHT,
   },
   categoriesItemContainerCenter: {
     alignItems: 'center',
@@ -29,6 +27,16 @@ const styles = StyleSheet.create({
   categoriesItemContainerRight: {
     alignItems: 'flex-end',
     justifyContent: 'center',
+  },
+  textContainer: {
+    position: 'absolute'
+  },
+  textContainerLeft: {
+    left: 15,
+  },
+  textContainerRight: {
+    right: 15,
+    alignItems: 'flex-end',
   },
   categoriesPhoto: {
     width: '100%',
@@ -43,7 +51,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 1.0,
     elevation: 3
   },
-  category: Utils.textShadow,
   categoriesName: {
     fontSize: 39,
     fontWeight: fontWeights.Black,

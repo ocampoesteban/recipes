@@ -16,6 +16,6 @@ const colors = {
 }
 
 export {
-    colors,
-    fontWeights,
+    colors,// TODO: update names
+    fontWeights,// TODO: update names
   }
