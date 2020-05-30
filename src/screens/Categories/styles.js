@@ -1,22 +1,39 @@
 import { StyleSheet } from 'react-native';
+import { fontWeights } from "../../components/commons/utils";
+import { Utils } from '../../AppStyles';
 
 const styles = StyleSheet.create({
   categoriesItemContainer: {
     flex: 1,
     margin: 10,
-    justifyContent: 'center',
+    height: 160,
+  },
+  textContainer: {
+    position: 'absolute'
+  },
+  textContainerLeft: {
+    left: 20,
+  },
+  textContainerRight: {
+    right: 20,
+    alignItems: 'flex-end',
+  },
+  categoriesItemContainerCenter: {
     alignItems: 'center',
-    height: 215,
-    borderColor: '#cccccc',
-    borderWidth: 0.5,
-    borderRadius: 20,
+    justifyContent: 'center',
+  },
+  categoriesItemContainerLeft: {
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  categoriesItemContainerRight: {
+    alignItems: 'flex-end',
+    justifyContent: 'center',
   },
   categoriesPhoto: {
     width: '100%',
     height: 155,
     borderRadius: 20,
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
     shadowColor: 'blue',
     shadowOffset: {
       width: 0,
@@ -26,17 +43,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 1.0,
     elevation: 3
   },
+  category: Utils.textShadow,
   categoriesName: {
-    flex: 1,
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#333333',
-    marginTop: 8
+    fontSize: 39,
+    fontWeight: fontWeights.Black,
   },
   categoriesInfo: {
-    marginTop: 3,
-    marginBottom: 5
+    fontSize: 29,
+    fontWeight: fontWeights.Bold,
   }
 });
 

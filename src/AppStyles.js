@@ -11,7 +11,7 @@ const RECIPE_ITEM_HEIGHT = 150;
 const RECIPE_ITEM_MARGIN = 20;
 
 // 2 photos per width
-export const RecipeCard = StyleSheet.create({
+ const RecipeCard = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -46,3 +46,17 @@ export const RecipeCard = StyleSheet.create({
     marginBottom: 8
   }
 });
+
+ const Utils = StyleSheet.create({
+  textShadow: {
+    color: 'white',
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
+  },
+})
+
+export {
+  Utils,
+  RecipeCard
+}

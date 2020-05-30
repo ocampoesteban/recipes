@@ -12,10 +12,10 @@ const fontWeights = {
 
 const colors = {
     primary: '#2cd18a',
-    secondary: '#2cd18a',
+    secondary: '#2cd18a', // TODO: update
 }
 
 export {
-    fontWeights,
     colors,
+    fontWeights,
   }
