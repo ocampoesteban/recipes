@@ -1,10 +1,11 @@
-import { FlatList, Text, View, TouchableHighlight, Image } from 'react-native';
+import { FlatList, Text, View, TouchableHighlight, Image, SafeAreaView } from 'react-native';
+import React from 'react';
 import styles from './styles';
 import { recipes } from '../../data/dataArrays';
-import MenuImage from '../../components/MenuImage/MenuImage';
 import { getCategoryName } from '../../data/MockDataAPI';
-import React from 'react';
+import MenuImage from '../../components/MenuImage/MenuImage';
 import AnimatedIcon from '../../components/AnimatedIcon/AnimatedIcon';
+import CarouselSimple from '../../components/CarouselSimple/CarouselSimple';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -47,7 +48,9 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
+
       <View>
+        <CarouselSimple />
         <FlatList
           vertical
           showsVerticalScrollIndicator={false}

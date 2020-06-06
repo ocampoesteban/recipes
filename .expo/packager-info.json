@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 53146,
-  "expoServerNgrokUrl": "https://uk-fs2.esocampo.recipes.exp.direct",
-  "packagerNgrokUrl": "https://packager.uk-fs2.esocampo.recipes.exp.direct",
-  "ngrokPid": 53241,
+  "packagerPort": 19004,
+  "packagerPid": 22418,
+  "expoServerNgrokUrl": "https://b9-xtz.esocampo.recipes.exp.direct",
+  "packagerNgrokUrl": "https://packager.b9-xtz.esocampo.recipes.exp.direct",
+  "ngrokPid": 22430,
   "webpackServerPort": null
 }
