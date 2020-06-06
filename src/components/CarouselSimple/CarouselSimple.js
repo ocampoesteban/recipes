@@ -1,14 +1,13 @@
 import * as React from 'react';
 import {
   Text, 
-  View,
-  SafeAreaView } from 'react-native';
-
+  View 
+} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
+import styles from './styles';
+import { Dimensions } from 'react-native';
 
 export default class CarouselSimple extends React.Component {
-
- 
     constructor(props){
         super(props);
         this.state = {
@@ -39,36 +38,31 @@ export default class CarouselSimple extends React.Component {
     }
 
     renderItem({item}){
-        return (
-          <View style={{
-            backgroundColor:'floralwhite',
-            borderRadius: 25,
-            height: 150,
-            paddingTop: 20,
-            paddingLeft: 90,
-            marginLeft: 10
-          }}>
-            <Text style={{fontSize: 50}}>{item.title}</Text>
-            <Text style={{fontSize: 25}}>{item.text}</Text>
-          </View>
-        )
+      return (
+        <View style={styles.carouselItem}>
+          <Text style={{fontSize: 50}}>{item.title}</Text>
+          <Text style={{fontSize: 25}}>{item.text}</Text>
+        </View>
+      )
     }
 
     render() {
-        return (
-          <View
-            style={{  flexDirection:'row', justifyContent: 'center', }}
-          >
-            <Carousel
-                layout={"default"}
-                ref={ref => this.carousel = ref}
-                data={this.state.carouselItems}
-                sliderWidth={360}
-                itemWidth={360}
-                renderItem={this.renderItem}
-                onSnapToItem = { index => this.setState({activeIndex:index}) } />
-          </View>
-        );
+      const { width: viewportWidth } = Dimensions.get('window');
+
+      return (
+        <View
+          style={styles.carouselContainer}
+        >
+        <Carousel
+          layout={"default"}
+          ref={ref => this.carousel = ref}
+          data={this.state.carouselItems}
+          sliderWidth={viewportWidth - 70}
+          itemWidth={viewportWidth - 70}
+          renderItem={this.renderItem}
+          onSnapToItem = { index => this.setState({activeIndex:index}) } />
+        </View>
+      );
     }
 }
 

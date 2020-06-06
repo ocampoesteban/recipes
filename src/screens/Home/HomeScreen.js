@@ -1,4 +1,4 @@
-import { FlatList, Text, View, TouchableHighlight, Image, SafeAreaView } from 'react-native';
+import { FlatList, Text, View, TouchableHighlight, Image, ScrollView } from 'react-native';
 import React from 'react';
 import styles from './styles';
 import { recipes } from '../../data/dataArrays';
@@ -37,6 +37,7 @@ export default class HomeScreen extends React.Component {
         <AnimatedIcon 
           initialIcon = 'heart'
           secondIcon = 'hearto'
+          value={item.favorite}
           positionIcon = 'animatedIconContainerRightTop'
         />
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
@@ -48,9 +49,8 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-
-      <View>
-        <CarouselSimple />
+      <ScrollView>
+        <CarouselSimple/>
         <FlatList
           vertical
           showsVerticalScrollIndicator={false}
@@ -59,7 +59,7 @@ export default class HomeScreen extends React.Component {
           renderItem={this.renderRecipes}
           keyExtractor={item => `${item.recipeId}`}
         />
-      </View>
+       </ScrollView>
     );
   }
 }

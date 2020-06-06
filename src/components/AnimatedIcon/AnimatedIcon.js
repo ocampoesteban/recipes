@@ -25,22 +25,24 @@ export default class AnimatedIcon extends React.Component {
     this.setState(prevState => ({ liked: !prevState.liked }))
   }
 
-  getIconPosition = (iconPosition) => {
+  componentDidMount(){
+    const { value } = this.props;
+    this.setState(() => ({ liked: value }))
+  }
+
+  getIconPosition = iconPosition => {
     switch (iconPosition) {
       case 'animatedIconContainerRightTop':
         return styles.animatedIconContainerRightTop;
-        break;
-      case 'animatedIconContainerRightTop':
-        return styles;
-        break;
-      case 'animatedIconContainerRightTop':
-        break;
-      case 'animatedIconContainerRightTop':
-        break;
-      case 'animatedIconContainerRightTop':
-        break;
+      case 'animatedIconContainerRightBottom':
+          return styles.animatedIconContainerRightBottom;
+      case 'animatedIconContainerLeftTop':
+        return styles.animatedIconContainerLeftTop;
+      case 'animatedIconContainerLeftBottom':
+        return styles.animatedIconContainerLeftBottom;
+      default:
+        return styles.animatedIconContainerRightTop;
     }
-     
   }
 
   render() {

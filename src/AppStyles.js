@@ -12,6 +12,9 @@ const RECIPE_ITEM_MARGIN = 20;
 // 2 photos per width
  const RecipeCard = StyleSheet.create({
   container: {
+    marginTop: 20,
+  },
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -54,6 +57,16 @@ const RECIPE_ITEM_MARGIN = 20;
     textShadowRadius: 5,
     textShadowColor: '#000',
   },
+  borderShadow: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+  }
 })
 
 export {
