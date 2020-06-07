@@ -27,12 +27,13 @@ export default class HomeScreen extends React.Component {
     this.props.navigation.navigate('Recipe', { item });
   };
 
-  changeAnimatedIcon = () => {
-
-  }
+  changeAnimatedIcon = () => { }
 
   renderRecipes = ({ item }) => (
-    <TouchableHighlight underlayColor='transparent' onPress={() => this.onPressRecipe(item)}>
+    <TouchableHighlight 
+      underlayColor='transparent' 
+      onPress={() => this.onPressRecipe(item)}
+    >
       <View style={styles.container}>
         <AnimatedIcon 
           initialIcon = 'heart'
@@ -49,11 +50,12 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+      >
         <CarouselSimple/>
         <FlatList
           vertical
-          showsVerticalScrollIndicator={false}
           numColumns={2}
           data={recipes}
           renderItem={this.renderRecipes}

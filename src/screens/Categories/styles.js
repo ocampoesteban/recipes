@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { fontWeights } from "../../components/commons/utils";
-import { Utils, SCREEN_WIDTH } from '../../AppStyles';
+import { fontWeights, SCREEN_WIDTH } from "../../components/commons/utils";
+import { Utils } from '../../AppStyles';
 
 // item size
 const CATEGORY_COLUMN = 1;

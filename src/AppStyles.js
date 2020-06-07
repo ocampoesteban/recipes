@@ -1,8 +1,5 @@
-import { StyleSheet, Dimensions } from 'react-native';
-// screen sizing
-const { width, height } = Dimensions.get('window');
-// orientation must fixed
-const SCREEN_WIDTH = width < height ? width : height;
+import { StyleSheet } from 'react-native';
+import { SCREEN_WIDTH } from './components/commons/utils';
 
 const recipeNumColums = 2;
 // item size
@@ -71,6 +68,5 @@ const RECIPE_ITEM_MARGIN = 20;
 
 export {
   Utils,
-  SCREEN_WIDTH,
   RecipeCard
 }

@@ -1,4 +1,6 @@
-const fontWeights = {
+import { Dimensions } from 'react-native';
+
+export const fontWeights = {
     Thin: '100',
     UltraLight: '200',
     Light: '300',
@@ -10,12 +12,16 @@ const fontWeights = {
     Black: '900'
 };
 
-const colors = {
+export const colors = {
     primary: '#2cd18a',
     secondary: '#2cd18a', // TODO: update
 }
 
-export {
-    colors,// TODO: update names
-    fontWeights,// TODO: update names
-  }
+export const { 
+    width: VIEW_PORT_WIDTH, 
+    height: VIEW_PORT_HEIGHT  
+} = Dimensions.get('window');
+
+// screen sizing
+// orientation must fixed
+export const SCREEN_WIDTH = VIEW_PORT_WIDTH < VIEW_PORT_HEIGHT ? VIEW_PORT_WIDTH : VIEW_PORT_HEIGHT;
