@@ -1,6 +1,5 @@
-import { StyleSheet, Dimensions } from 'react-native';
-
-const { width: viewportWidth } = Dimensions.get('window');
+import { StyleSheet } from 'react-native';
+import { VIEW_PORT_WIDTH } from "../../components/Commons/utils";
 
 const styles = StyleSheet.create({
   container: {
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     justifyContent: 'center',
-    width: viewportWidth,
+    width: VIEW_PORT_WIDTH,
     height: 250
   },
   paginationContainer: {
@@ -82,7 +81,7 @@ const styles = StyleSheet.create({
     margin: 10,
     fontWeight: 'bold',
     color: 'black',
-    textAlign: 'center'
+    textAlign: 'center',
   }
 });
 

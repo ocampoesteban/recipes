@@ -1,8 +1,15 @@
 import { StyleSheet } from 'react-native';
-import { RecipeCard } from '../../AppStyles';
+import { RecipeCard, GLOBALS } from '../../AppStyles';
 
 const styles = StyleSheet.create({
-  container: RecipeCard.container,
+  containerCentered: GLOBALS.containerCentered,
+  sectionTitle: GLOBALS.sectionTitle,
+  lastAddedContainer: {
+    justifyContent: 'space-between' // fix
+  },
+  cardContainer: RecipeCard.container,
+  containerLeft: RecipeCard.containerLeft,
+  containerRight: RecipeCard.containerRight,
   photo: RecipeCard.photo,
   title: RecipeCard.title,
   category: RecipeCard.category

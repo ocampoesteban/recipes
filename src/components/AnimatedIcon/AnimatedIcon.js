@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { colors } from "../commons/utils";
+import { COLORS } from "../Commons/utils";
 import styles from './styles';
 
 const _AnimatedIcon = Animatable.createAnimatableComponent(Icon);
@@ -60,7 +60,7 @@ export default class AnimatedIcon extends React.Component {
         <_AnimatedIcon
           ref = { this.handleAnimatedIconRef }
           name = { liked ? initialIcon : secondIcon }
-          color = { colors.primary }
+          color = { COLORS.primary }
           size = { 30 }
           style = { styles.icon }
             onPress = { this.handleOnPressLike }

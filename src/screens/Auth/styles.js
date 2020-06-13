@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from "../../components/commons/utils";
+import { COLORS } from "../../components/Commons/utils";
 const styles = StyleSheet.create({
   authContainer: {
     alignItems: 'center',
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   btn: {
     alignItems: 'center',
     backgroundColor: 'transparent',
-    borderColor: colors.primary,
+    borderColor: COLORS.primary,
     borderRadius: 100,
     borderWidth: 1,
     height: 50,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     color: '#6363635c',
   },
   loginBtnText: {
-    color: colors.primary,
+    color: COLORS.primary,
   },
   text: {
     alignItems: 'center', 
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   createText: {
-    color: colors.primary,
+    color: COLORS.primary,
     fontWeight: "bold",
     paddingLeft:3,
   },

@@ -25,7 +25,7 @@ export default class CategoriesScreen extends React.Component {
     this.props.navigation.navigate('RecipesList', { category, title });
   };
 
-  renderCategory = ( item, key ) => (
+  renderCategory = ({ item, index }) => (
     <TouchableHighlight 
       underlayColor='transparent' 
       onPress={() => this.onPressCategory(item)}
@@ -40,11 +40,18 @@ export default class CategoriesScreen extends React.Component {
           <View 
             style={[
               styles.textContainer,
-              key % 2 ?
+              index % 2 ?
               styles.textContainerRight:
               styles.textContainerLeft
             ]}>
-            <Text style={[styles.category, styles.categoriesName]}>{item.name}</Text>
+            <Text 
+              style={[
+                styles.category, 
+                styles.categoriesName
+              ]}
+            >
+              {item.name}
+            </Text>
             <Text style={[styles.category, styles.categoriesInfo]}>{getNumberOfRecipes(item.id)} recipes</Text>
           </View>
         </View>
@@ -56,7 +63,7 @@ export default class CategoriesScreen extends React.Component {
       <View>
         <FlatList
           data={categories}
-          renderItem={({item, index}) => this.renderCategory(item,index)}
+          renderItem={this.renderCategory}
           keyExtractor={item => `${item.id}`}
         />
       </View>

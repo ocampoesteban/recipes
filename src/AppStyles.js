@@ -1,27 +1,27 @@
 import { StyleSheet } from 'react-native';
-import { SCREEN_WIDTH } from './components/commons/utils';
+import { SCREEN_WIDTH , fontWeights} from './components/Commons/utils';
 
 const recipeNumColums = 2;
 // item size
 const RECIPE_ITEM_HEIGHT = 150;
-const RECIPE_ITEM_MARGIN = 20;
+const RECIPE_ITEM_MARGIN = 25;
 
 // 2 photos per width
  const RecipeCard = StyleSheet.create({
   container: {
-    marginTop: 20,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: RECIPE_ITEM_MARGIN,
-    marginTop: 20,
+    marginTop: 0,
     width: (SCREEN_WIDTH - (recipeNumColums + 1) * RECIPE_ITEM_MARGIN) / recipeNumColums,
     height: RECIPE_ITEM_HEIGHT + 75,
     borderColor: '#cccccc',
     borderWidth: 0.5,
     borderRadius: 15
+  },
+  containerLeft: {
+    marginLeft: 10,
+  },
+  containerRight: {
+    marginRight: 10,
   },
   photo: {
     width: (SCREEN_WIDTH - (recipeNumColums + 1) * RECIPE_ITEM_MARGIN) / recipeNumColums,
@@ -46,7 +46,19 @@ const RECIPE_ITEM_MARGIN = 20;
   }
 });
 
- const Utils = StyleSheet.create({
+const GLOBALS = StyleSheet.create({
+  sectionTitle: {
+    fontSize: 23,
+    marginTop: 20,
+    textTransform: 'uppercase',
+    fontWeight: fontWeights.Heavy,
+  },
+  containerCentered: {
+    alignItems: 'center'
+  }
+})
+
+const UTILS = StyleSheet.create({
   textShadow: {
     color: '#fff',
     letterSpacing: 2,
@@ -67,6 +79,7 @@ const RECIPE_ITEM_MARGIN = 20;
 })
 
 export {
-  Utils,
+  GLOBALS,
+  UTILS,
   RecipeCard
 }

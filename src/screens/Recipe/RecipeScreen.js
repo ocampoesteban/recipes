@@ -1,12 +1,9 @@
 import React from 'react';
 import {
-  FlatList,
   ScrollView,
   Text,
   View,
-  TouchableOpacity,
   Image,
-  Dimensions,
   TouchableHighlight
 } from 'react-native';
 import styles from './styles';
@@ -15,8 +12,6 @@ import BackButton from '../../components/BackButton/BackButton';
 import CarouselC from '../../components/Carousel/Carousel';
 
 import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
-
-const { width: viewportWidth } = Dimensions.get('window');
 
 export default class RecipeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -55,7 +50,6 @@ export default class RecipeScreen extends React.Component {
 
   render() {
     const { activeSlide } = this.state;
-    debugger
     const { navigation } = this.props;
     const item = navigation.getParam('item');
     const category = getCategoryById(item.categoryId);

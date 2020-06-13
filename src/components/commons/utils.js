@@ -12,7 +12,7 @@ export const fontWeights = {
     Black: '900'
 };
 
-export const colors = {
+export const COLORS = {
     primary: '#2cd18a',
     secondary: '#2cd18a', // TODO: update
 }

@@ -691,3 +691,31 @@ export const ingredients = [
       'http://images.media-allrecipes.com/userphotos/960x960/3758635.jpg'
   },
 ];
+
+export const carouselItems = [
+  {
+      title:"ITEM 1",
+      text: "TEXT 1",
+      photo_url: 'https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imwidth=1400'
+  },
+  {
+      title:"ITEM 2",
+      text: "TEXT 2",
+      photo_url: 'https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imwidth=1400'
+  },
+  {
+      title:"ITEM 3",
+      text: "TEXT 3",
+      photo_url: 'https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imwidth=1400'
+  },
+  {
+      title:"ITEM 4",
+      text: "TEXT 4",
+      photo_url: 'https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imwidth=1400'
+  },
+  {
+      title:"ITEM 5",
+      text: "TEXT 5",
+      photo_url: 'https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imwidth=1400'
+  },
+];

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { SCREEN_WIDTH } from '../../components/commons/utils'
+import { SCREEN_WIDTH } from '../../components/Commons/utils'
 
 const numColumns = 3;
 // item size

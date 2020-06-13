@@ -6,6 +6,7 @@ import { getCategoryName } from '../../data/MockDataAPI';
 import MenuImage from '../../components/MenuImage/MenuImage';
 import AnimatedIcon from '../../components/AnimatedIcon/AnimatedIcon';
 import CarouselSimple from '../../components/CarouselSimple/CarouselSimple';
+import { categories } from "../../data/dataArrays";
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -29,12 +30,18 @@ export default class HomeScreen extends React.Component {
 
   changeAnimatedIcon = () => { }
 
-  renderRecipes = ({ item }) => (
+  renderRecipes = ({ item, index }) => (
     <TouchableHighlight 
       underlayColor='transparent' 
       onPress={() => this.onPressRecipe(item)}
     >
-      <View style={styles.container}>
+      {/* CardContainer */}
+      <View style={[
+        styles.cardContainer,
+        index % 2 ?
+        styles.containerLeft:
+        styles.containerRight
+      ]}>
         <AnimatedIcon 
           initialIcon = 'heart'
           secondIcon = 'hearto'
@@ -50,18 +57,37 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <ScrollView
+      <ScrollView 
         showsVerticalScrollIndicator={false}
-      >
-        <CarouselSimple/>
-        <FlatList
-          vertical
-          numColumns={2}
-          data={recipes}
-          renderItem={this.renderRecipes}
-          keyExtractor={item => `${item.recipeId}`}
-        />
-       </ScrollView>
+      > 
+        {/* Container */}
+        <View style={styles.containerCentered}>
+
+          {/* DiscoverMoreContainer */}
+          <View style={styles.discoverMoreContainer}>
+            <Text style={styles.sectionTitle}>
+              Discover more
+            </Text>
+            <CarouselSimple 
+              data={categories}
+            />
+          </View>
+
+          {/* LastAddedContainer */}
+          <View style={styles.lastAddedContainer}>
+            <Text style={styles.sectionTitle}>
+              Last added
+            </Text>
+            <FlatList
+              vertical
+              numColumns={2}
+              data={recipes}
+              renderItem={this.renderRecipes}
+              keyExtractor={item => `${item.recipeId}`}
+            />
+          </View>
+        </View>
+      </ScrollView>
     );
   }
 }

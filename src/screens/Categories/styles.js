@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { fontWeights, SCREEN_WIDTH } from "../../components/commons/utils";
-import { Utils } from '../../AppStyles';
+import { fontWeights, SCREEN_WIDTH } from "../../components/Commons/utils";
+import { UTILS } from '../../AppStyles';
 
 // item size
 const CATEGORY_COLUMN = 1;
@@ -8,7 +8,7 @@ const CATEGORY_HEIGHT = 150;
 const CATEGORY_MARGIN = 20;
 
 const styles = StyleSheet.create({
-  category: Utils.textShadow,
+  category: UTILS.textShadow,
   categoriesItemContainer: {
     alignSelf: "center",
     flex: 1,
