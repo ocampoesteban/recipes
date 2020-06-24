@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   containerCentered: GLOBALS.containerCentered,
   sectionTitle: GLOBALS.sectionTitle,
   lastAddedContainer: {
-    justifyContent: 'space-between' // fix
+    justifyContent: 'space-between' // TODO: fix
   },
   cardContainer: RecipeCard.container,
   containerLeft: RecipeCard.containerLeft,

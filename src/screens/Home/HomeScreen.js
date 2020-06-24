@@ -31,11 +31,12 @@ export default class HomeScreen extends React.Component {
   changeAnimatedIcon = () => { }
 
   renderRecipes = ({ item, index }) => (
+    // TODO: Create RecipeCard component 
     <TouchableHighlight 
       underlayColor='transparent' 
       onPress={() => this.onPressRecipe(item)}
     >
-      {/* CardContainer */}
+      {/* RecipesCardContainer */}
       <View style={[
         styles.cardContainer,
         index % 2 ?
@@ -46,7 +47,7 @@ export default class HomeScreen extends React.Component {
           initialIcon = 'heart'
           secondIcon = 'hearto'
           value={item.favorite}
-          positionIcon = 'animatedIconContainerRightTop'
+          iconPosition = 'animatedIconContainerRightTop'
         />
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
         <Text style={styles.title}>{item.title}</Text>
@@ -68,6 +69,7 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.sectionTitle}>
               Discover more
             </Text>
+           
             <CarouselSimple 
               data={categories}
             />
