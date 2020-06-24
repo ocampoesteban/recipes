@@ -7,11 +7,11 @@ const RECIPE_ITEM_HEIGHT = 150;
 const RECIPE_ITEM_MARGIN = 25;
 
 // 2 photos per width
- const RecipeCard = StyleSheet.create({
+ const RecipeCard = StyleSheet.create({ // TODO: Create RecipeCard component
   container: {
     alignItems: 'center',
-    marginTop: 0,
-    width: (SCREEN_WIDTH - (recipeNumColums + 1) * RECIPE_ITEM_MARGIN) / recipeNumColums,
+    marginTop: 15,
+    width: (SCREEN_WIDTH - (recipeNumColums + 0.5) * RECIPE_ITEM_MARGIN) / recipeNumColums,
     height: RECIPE_ITEM_HEIGHT + 75,
     borderColor: '#cccccc',
     borderWidth: 0.5,
@@ -24,7 +24,7 @@ const RECIPE_ITEM_MARGIN = 25;
     marginRight: 10,
   },
   photo: {
-    width: (SCREEN_WIDTH - (recipeNumColums + 1) * RECIPE_ITEM_MARGIN) / recipeNumColums,
+    width: (SCREEN_WIDTH - (recipeNumColums + 0.5) * RECIPE_ITEM_MARGIN) / recipeNumColums,
     height: RECIPE_ITEM_HEIGHT,
     borderRadius: 15,
     borderBottomLeftRadius: 0,
@@ -48,10 +48,11 @@ const RECIPE_ITEM_MARGIN = 25;
 
 const GLOBALS = StyleSheet.create({
   sectionTitle: {
-    fontSize: 23,
+    color: '#444444',
+    fontSize: 26,
+    fontWeight: fontWeights.Heavy,
     marginTop: 20,
     textTransform: 'uppercase',
-    fontWeight: fontWeights.Heavy,
   },
   containerCentered: {
     alignItems: 'center'

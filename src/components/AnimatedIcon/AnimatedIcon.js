@@ -47,14 +47,14 @@ export default class AnimatedIcon extends React.Component {
 
   render() {
     const { liked } = this.state;
-    const { initialIcon, secondIcon, positionIcon } = this.props;
+    const { initialIcon, secondIcon, iconPosition } = this.props;
 
     return (
       <TouchableOpacity
         activeOpacity = { 1 }
         style = {[
           styles.animatedIconContainer,
-          this.getIconPosition(positionIcon)
+          this.getIconPosition(iconPosition)
         ]}
       >
         <_AnimatedIcon

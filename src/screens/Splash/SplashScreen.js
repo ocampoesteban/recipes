@@ -1,13 +1,7 @@
 import React from 'react';
 import {
-  FlatList,
-  ScrollView,
-  Text,
   View,
-  TouchableOpacity,
-  AsyncImageAnimated,
   Image,
-  TouchableHighlight
 } from 'react-native';
 import styles from './styles';
 
